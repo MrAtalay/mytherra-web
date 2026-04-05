@@ -1,0 +1,154 @@
+.world-welcome-section {
+    --bg-color: #0b1220;
+    --accent: #f6c84c;
+    --text: #f4f7fb;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 56vh;
+    padding: 4rem 1.25rem;
+    box-sizing: border-box;
+    background-color: var(--bg-color);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: var(--text);
+}
+
+.world-welcome-section::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(11,18,32,0.55) 0%, rgba(11,18,32,0.75) 100%);
+    pointer-events: none;
+}
+
+.world-welcome-inner {
+    position: relative;
+    width: 100%;
+    max-width: 1180px;
+    display: flex;
+    gap: 2.25rem;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1;
+}
+
+.world-welcome-copy {
+    flex: 1 1 560px;
+    color: var(--text);
+}
+
+.world-welcome-title {
+    margin: 0 0 0.5rem 0;
+    font-size: clamp(1.75rem, 4vw, 3.6rem);
+    line-height: 1.03;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    text-shadow: 0 3px 18px rgba(0,0,0,0.6);
+}
+
+.world-welcome-subtitle {
+    margin: 0 0 1.5rem 0;
+    font-size: clamp(0.95rem, 1.7vw, 1.125rem);
+    color: rgba(244,247,251,0.9);
+    max-width: 60ch;
+}
+
+.world-welcome-actions {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.btn-welcome {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.65rem 1.05rem;
+    border-radius: 10px;
+    background: linear-gradient(90deg, rgba(246,200,76,0.98), rgba(240,160,40,0.95));
+    color: #081021;
+    font-weight: 700;
+    text-decoration: none;
+    box-shadow: 0 6px 20px rgba(246,200,76,0.12);
+    transition: transform .18s ease, box-shadow .18s ease, opacity .12s ease;
+}
+
+.btn-welcome:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 36px rgba(246,200,76,0.18);
+    opacity: 0.98;
+}
+
+.btn-secondary {
+    padding: 0.55rem 0.9rem;
+    border-radius: 10px;
+    background: rgba(255,255,255,0.06);
+    color: var(--text);
+    border: 1px solid rgba(255,255,255,0.06);
+}
+
+.world-welcome-visual {
+    flex: 0 0 360px;
+    max-width: 420px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.world-welcome-visual img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 18px 60px rgba(2,6,23,0.6);
+    transform: translateZ(0);
+}
+
+@media (max-width: 880px) {
+    .world-welcome-inner {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.25rem;
+    }
+    .world-welcome-visual {
+        width: 100%;
+        max-width: 560px;
+    }
+}
+
+@media (max-width: 520px) {
+    .world-welcome-section {
+        padding: 2.25rem 1rem;
+        min-height: 48vh;
+    }
+    .world-welcome-title {
+        font-size: 1.7rem;
+    }
+    .world-welcome-subtitle {
+        font-size: 0.95rem;
+    }
+    .world-welcome-visual {
+        display: none;
+    }
+}
+
+/* Animations and accessibility */
+.world-welcome-title {
+    transition: transform .6s cubic-bezier(.2,.9,.3,1), opacity .55s ease;
+}
+.world-welcome-title.reveal { transform: translateY(8px); opacity: 0 }
+.world-welcome-title.reveal.is-visible { transform: translateY(0); opacity: 1 }
+
+.btn-welcome:focus, .btn-secondary:focus {
+    outline: 3px solid rgba(246,200,76,0.18);
+    outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .world-welcome-title, .btn-welcome, .btn-secondary { transition: none !important }
+}
+
+

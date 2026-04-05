@@ -1,0 +1,89 @@
+.unanswered-mysteries-section {
+  padding: 6rem 1.5rem;
+  background: linear-gradient(180deg, #0b0d12 0%, #07080c 100%);
+  color: #e6e8ee;
+}
+
+.mysteries-header {
+  max-width: 720px;
+  margin: 0 auto 4rem;
+  text-align: center;
+}
+
+.mysteries-header h2 {
+  font-size: 2.6rem;
+  font-weight: 800;
+  letter-spacing: 0.4px;
+  margin-bottom: 1rem;
+}
+
+.mysteries-header p {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #b6bccf;
+}
+
+.mysteries-grid {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 2rem;
+}
+
+.mystery-card {
+  background: linear-gradient(160deg, #121524 0%, #0b0d18 100%);
+  border: 1px solid rgba(120, 130, 180, 0.12);
+  border-radius: 14px;
+  padding: 1.8rem 1.6rem;
+  transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.mystery-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle at top left,
+    rgba(120, 100, 255, 0.08),
+    transparent 60%
+  );
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.mystery-card h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+  color: #f0f2ff;
+}
+
+.mystery-card p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #aeb4cc;
+}
+
+.mystery-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(150, 130, 255, 0.35);
+  box-shadow: 0 12px 32px rgba(20, 25, 60, 0.6);
+}
+
+.mystery-card:hover::before {
+  opacity: 1;
+}
+
+/* Responsive tweaks */
+@media (max-width: 640px) {
+  .mysteries-header h2 {
+    font-size: 2.1rem;
+  }
+
+  .mystery-card {
+    padding: 1.5rem;
+  }
+}

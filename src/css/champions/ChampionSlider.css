@@ -1,0 +1,120 @@
+.champion-slider {
+  position: relative;
+  width: 100%;
+  min-height: 90vh;
+
+  display: flex;
+  align-items: center;
+
+  background-size : cover;
+  background-repeat: no-repeat;
+
+  transition: opacity 1.2s ease-in-out;
+  overflow: hidden;
+}
+
+/* KARARTMA + DERİNLİK */
+.champion-slider .overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.85),
+    rgba(0, 0, 0, 0.35),
+    rgba(0, 0, 0, 0.15)
+  );
+  z-index: 1;
+}
+
+/* METİN */
+.champion-slider .content {
+  position: relative;
+  z-index: 2;
+  padding-left: 120px;
+  max-width: 520px;
+}
+
+.content h2 {
+  font-size: 56px;
+  color: #c7a75b;
+  margin-bottom: 16px;
+}
+
+.content p {
+  font-size: 18px;
+  color: #f0a801;
+  opacity: 0.9;
+  margin-bottom: 24px;
+  line-height: 1.6;
+}
+
+.content button {
+  padding: 12px 32px;
+  border: 1px solid #c7a75b;
+  background: transparent;
+  color: #c7a75b;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.content button:hover {
+  background: #c7a75b;
+  color: #000;
+}
+
+.champion-slider.grondemith {
+  background-position: right 15% top 20%;
+}
+
+.champion-slider.valerith {
+  background-position: right 15% top 20%;
+}
+
+.champion-slider.stonith {
+  background-position: right 15% top 20%;
+}
+
+/* TEMAYA GÖRE HAFİF RENK */
+.champion-slider.grondemith .overlay {
+  background: linear-gradient(
+    to right,
+    rgba(5, 7, 15, 0.9),
+    rgba(5, 7, 15, 0.4)
+  );
+}
+
+.champion-slider.valerith .overlay {
+  background: linear-gradient(
+    to right,
+    rgba(20, 20, 20, 0.9),
+    rgba(20, 20, 20, 0.4)
+  );
+}
+
+.champion-slider.stonith .overlay {
+  background: linear-gradient(
+    to right,
+    rgba(20, 5, 5, 0.9),
+    rgba(20, 5, 5, 0.4)
+  );
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .champion-slider {
+    min-height: 70vh;
+  }
+
+  .champion-slider .content {
+    padding-left: 40px;
+    max-width: 90%;
+  }
+
+  .content h2 {
+    font-size: 36px;
+  }
+
+  .content p {
+    font-size: 16px;
+  }
+}

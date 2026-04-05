@@ -1,0 +1,154 @@
+.champion-card {
+  display: flex;
+  gap: 32px;
+  padding: 40px;
+  margin-bottom: 60px;
+
+  align-items: center;
+
+  background: linear-gradient(
+    135deg,
+    rgba(15, 18, 30, 0.95),
+    rgba(8, 10, 18, 0.95)
+  );
+
+  border: 1px solid rgba(199, 167, 91, 0.25);
+  border-radius: 18px;
+
+  box-shadow:
+    0 20px 40px rgba(0, 0, 0, 0.6),
+    inset 0 0 60px rgba(199, 167, 91, 0.05);
+
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.champion-card:hover {
+  transform: translateY(-6px);
+  box-shadow:
+    0 30px 60px rgba(0, 0, 0, 0.8),
+    inset 0 0 80px rgba(199, 167, 91, 0.12);
+}
+
+/* IMAGE */
+.champion-card img {
+  width: 300px;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 14px;
+
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.8);
+}
+
+/* INFO */
+.champion-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #e5e7eb;
+  max-width: 520px;
+}
+
+.champion-info h2 {
+  font-size: 38px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  color: #d6b76e;
+  margin-bottom: 4px;
+}
+
+.champion-info h4 {
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: rgba(214, 183, 110, 0.7);
+  margin-bottom: 18px;
+}
+
+.champion-info p {
+  font-size: 15px;
+  line-height: 1.75;
+  color: rgba(229, 231, 235, 0.85);
+  margin-bottom: 22px;
+}
+
+/* ROLE TAG */
+.role {
+  align-self: flex-start;
+  padding: 6px 14px;
+
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+
+  background: rgba(199, 167, 91, 0.15);
+  color: #c7a75b;
+  border: 1px solid rgba(199, 167, 91, 0.35);
+}
+
+.meta {
+  display: flex;
+  gap: 24px;
+  font-size: 13px;
+  font-weight: 500;
+  color: rgba(229, 231, 235, 0.75);
+  margin-bottom: 18px;
+}
+
+.abilities {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.abilities li {
+  font-size: 14px;
+  padding-left: 14px;
+  margin-bottom: 6px;
+  position: relative;
+  color: rgba(229, 231, 235, 0.8);
+}
+
+.abilities li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #c7a75b;
+}
+
+.details {
+  margin-top: 20px;
+} 
+
+.details button {
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #fff;
+  background-color: #c7a75b;
+  border: none;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+}
+
+.details button:hover {
+  background-color: #a68a4f;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .champion-card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .champion-card img {
+    width: 100%;
+    height: auto;
+  }
+
+  .champion-info {
+    max-width: 100%;
+  }
+}

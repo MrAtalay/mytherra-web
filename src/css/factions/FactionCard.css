@@ -1,0 +1,165 @@
+.faction-card {
+  display: flex;
+  gap: 32px;
+  padding: 40px;
+  margin-bottom: 60px;
+
+  background: linear-gradient(
+    135deg,
+    rgba(15, 18, 30, 0.95),
+    rgba(8, 10, 18, 0.95)
+  );
+
+  border: 1px solid rgba(199, 167, 91, 0.25);
+  border-radius: 18px;
+
+  box-shadow:
+    0 20px 40px rgba(0, 0, 0, 0.6),
+    inset 0 0 60px rgba(199, 167, 91, 0.05);
+
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.faction-card:hover {
+  transform: translateY(-6px);
+  box-shadow:
+    0 30px 60px rgba(0, 0, 0, 0.8),
+    inset 0 0 80px rgba(199, 167, 91, 0.12);
+}
+
+/* IMAGE */
+.faction-card img {
+  width: 320px;
+  height: 420px;
+  object-fit: cover;
+  border-radius: 14px;
+
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.8);
+}
+
+/* INFO */
+.faction-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #e5e7eb;
+}
+
+.faction-info h2 {
+  font-size: 42px;
+  color: #c7a75b;
+  margin-bottom: 8px;
+}
+
+.faction-info h4 {
+  font-size: 18px;
+  font-weight: 500;
+  opacity: 0.8;
+  margin-bottom: 20px;
+}
+
+.faction-info p {
+  max-width: 520px;
+  line-height: 1.6;
+  margin-bottom: 24px;
+  opacity: 0.9;
+}
+.faction-info .meta {
+  display: flex;
+  gap: 24px;
+  font-size: 14px;
+  margin-bottom: 20px;
+  opacity: 0.8;
+}
+.faction-info h3 {
+  font-size: 16px;
+  font-weight: 500;
+  opacity: 0.75;
+  letter-spacing: 0.5px;
+  margin-bottom: 6px;
+}
+
+/* Kıta + Ülke badge */
+.faction-info .meta span {
+  padding: 6px 14px;
+  border-radius: 999px;
+  background: rgba(199, 167, 91, 0.15);
+  border: 1px solid rgba(199, 167, 91, 0.35);
+  color: #c7a75b;
+}
+
+/* Hover’da image’e hafif zoom */
+.faction-card:hover img {
+  transform: scale(1.04);
+  transition: transform 0.6s ease;
+}
+.faction-card img {
+  transition: transform 0.6s ease;
+}
+
+.factions-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 32px;
+}
+
+.details-link {
+  margin-top: auto;
+  align-self: flex-start;
+  font-size: 14px;
+  font-weight: 600;
+  color: #c7a75b;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.details-link:hover {
+  color: #a68a4f;
+}
+
+
+/* Responsive */
+@media (max-width: 900px) {
+  .faction-card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .faction-card img {
+    width: 100%;
+    height: auto;
+  }
+
+  .faction-info {
+    align-items: center;
+  }
+}
+@media (max-width: 600px) {
+  .faction-card {
+    padding: 24px;
+    gap: 20px;
+  }
+
+  .faction-info h2 {
+    font-size: 32px;
+  }
+
+  .faction-info h4 {
+    font-size: 16px;
+  }
+
+  .faction-info p {
+    font-size: 14px;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .details-link {
+    align-self: center;
+  }
+}
+
+
+

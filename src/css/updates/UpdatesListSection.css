@@ -1,0 +1,159 @@
+.updates-list-section {
+  width: 100%;
+  padding: 4rem 1.5rem;
+  background: linear-gradient(180deg, #0b0b0e 0%, #121216 100%);
+  color: #e5e5e5;
+}
+
+.updates-list-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+/* Section title */
+.updates-list-header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.updates-list-header h2 {
+  font-size: 2.1rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  color: #f0f0f0;
+}
+
+.updates-list-header p {
+  max-width: 720px;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #b5b5b5;
+}
+
+/* Update cards */
+.updates-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+}
+
+.update-card {
+  position: relative;
+  padding: 1.75rem 2rem;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.update-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 12px;
+  background: radial-gradient(
+    circle at top left,
+    rgba(255, 255, 255, 0.08),
+    transparent 60%
+  );
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.update-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(255, 255, 255, 0.15);
+}
+
+.update-card:hover::before {
+  opacity: 1;
+}
+
+/* Card header */
+.update-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.75rem;
+  gap: 1rem;
+}
+
+.update-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #f3f3f3;
+}
+
+/* Type badge */
+.update-type {
+  font-size: 0.7rem;
+  padding: 0.3rem 0.65rem;
+  border-radius: 999px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.update-type.devlog {
+  background: rgba(120, 180, 255, 0.15);
+  color: #8bbcff;
+  border: 1px solid rgba(120, 180, 255, 0.35);
+}
+
+.update-type.patch {
+  background: rgba(160, 255, 160, 0.15);
+  color: #a8ffb2;
+  border: 1px solid rgba(160, 255, 160, 0.35);
+}
+
+/* Meta info */
+.update-meta {
+  font-size: 0.8rem;
+  color: #9a9a9a;
+  margin-bottom: 1rem;
+}
+
+/* Description */
+.update-description {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: #cfcfcf;
+  max-width: 850px;
+}
+
+/* Read more */
+.update-read-more {
+  margin-top: 1.25rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #d6b36a;
+  transition: color 0.25s ease;
+}
+
+.update-card:hover .update-read-more {
+  color: #f1d88a;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .updates-list-section {
+    padding: 3rem 1rem;
+  }
+
+  .update-card {
+    padding: 1.5rem 1.4rem;
+  }
+
+  .update-title {
+    font-size: 1.1rem;
+  }
+}

@@ -1,0 +1,128 @@
+/* =========================
+   Lore Ages Section
+   ========================= */
+
+.lore-ages-section {
+  position: relative;
+  padding: 6rem 2rem;
+  background:
+    radial-gradient(circle at top, rgba(40, 20, 60, 0.25), transparent 60%),
+    linear-gradient(to bottom, #07060a, #0c0a12);
+  color: #e6e1ee;
+  overflow: hidden;
+}
+
+.lore-ages-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-title {
+  font-size: clamp(2.2rem, 4vw, 3rem);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 4rem;
+  text-align: center;
+  color: #d8cfee;
+}
+
+/* =========================
+   Ages Grid
+   ========================= */
+
+.ages-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2.5rem;
+}
+
+/* =========================
+   Age Card
+   ========================= */
+
+.age-card {
+  position: relative;
+  padding: 2.4rem 2.2rem;
+  background: linear-gradient(
+    160deg,
+    rgba(24, 20, 40, 0.85),
+    rgba(12, 10, 18, 0.95)
+  );
+  border: 1px solid rgba(140, 120, 200, 0.15);
+  border-radius: 14px;
+  box-shadow:
+    0 10px 30px rgba(0, 0, 0, 0.6),
+    inset 0 0 0 rgba(255, 255, 255, 0);
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease,
+    border-color 0.35s ease;
+}
+
+/* Antik kenar hissi */
+.age-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 14px;
+  background:
+    linear-gradient(
+      to bottom right,
+      rgba(255, 255, 255, 0.06),
+      transparent 40%
+    );
+  opacity: 0.35;
+  pointer-events: none;
+}
+
+/* =========================
+   Card Content
+   ========================= */
+
+.age-tag {
+  display: inline-block;
+  margin-bottom: 1.2rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #b9a9ff;
+  opacity: 0.85;
+}
+
+.age-card h3 {
+  font-size: 1.35rem;
+  margin-bottom: 1rem;
+  color: #f1ecff;
+}
+
+.age-card p {
+  font-size: 0.95rem;
+  line-height: 1.65;
+  color: #cfc6e8;
+}
+
+/* =========================
+   Hover – “Fark Edilme”
+   ========================= */
+
+.age-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(170, 140, 255, 0.35);
+  box-shadow:
+    0 18px 45px rgba(0, 0, 0, 0.75),
+    0 0 25px rgba(120, 90, 200, 0.2);
+}
+
+/* =========================
+   Responsive
+   ========================= */
+
+@media (max-width: 600px) {
+  .lore-ages-section {
+    padding: 4rem 1.5rem;
+  }
+
+  .section-title {
+    margin-bottom: 3rem;
+  }
+}

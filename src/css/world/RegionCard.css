@@ -1,0 +1,87 @@
+.region-card {
+  display: flex;
+  gap: 32px;
+  padding: 40px;
+  margin-bottom: 60px;
+
+  background: linear-gradient(
+    135deg,
+    rgba(15, 18, 30, 0.95),
+    rgba(8, 10, 18, 0.95)
+  );
+
+  border: 1px solid rgba(199, 167, 91, 0.25);
+  border-radius: 18px;
+
+  box-shadow:
+    0 20px 40px rgba(0, 0, 0, 0.6),
+    inset 0 0 60px rgba(199, 167, 91, 0.05);
+
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.region-card:hover {
+  transform: translateY(-6px);
+  box-shadow:
+    0 30px 60px rgba(0, 0, 0, 0.8),
+    inset 0 0 80px rgba(199, 167, 91, 0.12);
+}
+
+/* IMAGE */
+.region-card img {
+  width: 320px;
+  height: 420px;
+  object-fit: cover;
+  border-radius: 14px;
+
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.8);
+}
+
+/* INFO */
+.region-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #e5e7eb;
+}
+
+.region-info h2 {
+  font-size: 42px;
+  color: #c7a75b;
+  margin-bottom: 8px;
+}
+
+.region-info h4 {
+  font-size: 18px;
+  font-weight: 500;
+  opacity: 0.8;
+  margin-bottom: 20px;
+}
+
+.region-info p {
+  max-width: 520px;
+  line-height: 1.6;
+  margin-bottom: 24px;
+  opacity: 0.9;
+}
+.region-info .meta {
+  display: flex;
+  gap: 24px;
+  font-size: 14px;
+  margin-bottom: 20px;
+  opacity: 0.8;
+}
+
+.region-info .meta span {
+  padding: 6px 12px;
+  background: rgba(199, 167, 91, 0.1);
+  border-radius: 12px;
+}
+
+.page-title {
+  font-size: 36px;
+  font-weight: 700;
+  color: #d6b76e;
+  text-align: center;
+  margin-bottom: 40px;
+}

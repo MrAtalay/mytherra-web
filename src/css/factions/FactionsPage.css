@@ -1,0 +1,138 @@
+.faction-card {
+  display: flex;
+  flex-direction: column;
+
+  background: linear-gradient(
+    135deg,
+    rgba(15, 18, 30, 0.95),
+    rgba(8, 10, 18, 0.95)
+  );
+
+  border: 1px solid rgba(199, 167, 91, 0.25);
+  border-radius: 18px;
+
+  overflow: hidden;
+
+  box-shadow:
+    0 20px 40px rgba(0, 0, 0, 0.6),
+    inset 0 0 40px rgba(199, 167, 91, 0.05);
+
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.faction-card:hover {
+  transform: translateY(-8px);
+  box-shadow:
+    0 30px 60px rgba(0, 0, 0, 0.8),
+    inset 0 0 80px rgba(199, 167, 91, 0.12);
+}
+
+/* IMAGE */
+.faction-card img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+}
+
+/* INFO */
+.faction-info {
+  padding: 24px;
+  color: #e5e7eb;
+}
+
+.faction-info h2 {
+  font-size: 26px;
+  color: #c7a75b;
+  margin-bottom: 6px;
+}
+
+.faction-info h3 {
+  font-size: 14px;
+  font-weight: 500;
+  opacity: 0.7;
+  margin-bottom: 12px;
+}
+
+.faction-info p {
+  font-size: 15px;
+  line-height: 1.6;
+  opacity: 0.9;
+  margin-bottom: 16px;
+}
+
+/* META */
+.faction-info .meta {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.faction-info .meta span {
+  padding: 6px 12px;
+  font-size: 12px;
+  border-radius: 999px;
+  background: rgba(199, 167, 91, 0.15);
+  border: 1px solid rgba(199, 167, 91, 0.35);
+  color: #c7a75b;
+}
+
+.factions-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 32px;
+}
+
+.factions-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+
+  margin-top: 80px;
+  margin-bottom: 48px;
+  padding: 20px 24px;
+
+  background: linear-gradient(
+    135deg,
+    rgba(15, 18, 30, 0.9),
+    rgba(8, 10, 18, 0.9)
+  );
+
+  border: 1px solid rgba(199, 167, 91, 0.25);
+  border-radius: 16px;
+
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+}
+
+.factions-controls select {
+  background: rgba(8, 10, 18, 0.9);
+  color: #e5e7eb;
+
+  border: 1px solid rgba(199, 167, 91, 0.35);
+  border-radius: 10px;
+
+  padding: 10px 14px;
+  font-size: 14px;
+
+  cursor: pointer;
+}
+
+.factions-controls select:focus {
+  outline: none;
+  border-color: #c7a75b;
+}
+
+.factions-page {
+  padding: 60px 80px;
+}
+
+@media (max-width: 768px) {
+  .factions-controls {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+
+main {
+  flex: 1;
+}

@@ -1,0 +1,81 @@
+.patch-detail-page {
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 80px 20px;
+  color: var(--text-primary);
+}
+
+.patch-header {
+  margin-bottom: 64px;
+}
+
+.patch-badge {
+  display: inline-block;
+  background: linear-gradient(135deg, #6f8cff, #4f6cf5);
+  color: #fff;
+  font-size: 12px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  margin-bottom: 16px;
+}
+
+.patch-title {
+  font-size: 42px;
+  line-height: 1.2;
+  margin-bottom: 12px;
+}
+
+.patch-meta {
+  font-size: 14px;
+  opacity: 0.7;
+  margin-bottom: 20px;
+}
+
+.patch-summary {
+  font-size: 18px;
+  line-height: 1.6;
+  max-width: 720px;
+}
+
+.patch-content {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+
+.patch-section h2 {
+  font-size: 26px;
+  margin-bottom: 16px;
+}
+
+.patch-section ul {
+  padding-left: 20px;
+  display: grid;
+  gap: 10px;
+}
+
+.patch-section li {
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+.patch-footer {
+  margin-top: 80px;
+}
+
+.btn-secondary {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.patch-detail-page {
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 80px 20px;
+  color: #e6e6e6; /* ← TEST AMAÇLI */
+}
+
+.btn-secondary {
+  color: #8faaff; /* ← TEST AMAÇLI */
+}

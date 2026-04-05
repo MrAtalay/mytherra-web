@@ -1,0 +1,88 @@
+.mobs-welcome-section {
+  --bg: linear-gradient(180deg, rgba(6,10,18,0.6), rgba(6,10,18,0.85));
+  --accent: #f6c84c;
+  color: #f4f7fb;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 3rem 1.25rem;
+  background: var(--bg);
+}
+
+.mobs-welcome-inner {
+  max-width: 1180px;
+  margin: 0 auto;
+  display: flex;
+  gap: 1.6rem;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.mobs-welcome-copy {
+  flex: 1 1 540px;
+}
+
+.eyebrow {
+  color: rgba(244,247,251,0.85);
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin: 0 0 0.6rem 0;
+  font-size: 0.78rem;
+}
+
+.mobs-title {
+  margin: 0 0 0.5rem 0;
+  font-size: clamp(1.6rem, 3.6vw, 2.4rem);
+  line-height: 1.02;
+  font-weight: 800;
+  text-shadow: 0 8px 30px rgba(2,6,23,0.6);
+}
+
+.mobs-lead {
+  margin: 0 0 1.25rem 0;
+  color: rgba(244,247,251,0.92);
+  font-size: 1rem;
+  max-width: 64ch;
+}
+
+.btn-row { display:flex; gap:0.9rem; align-items:center }
+
+.btn-primary {
+  display:inline-block;
+  padding:0.6rem 1rem;
+  border-radius:10px;
+  background: linear-gradient(90deg,var(--accent),#f28f3b);
+  color: #071024;
+  font-weight:700;
+  text-decoration:none;
+}
+
+.btn-primary:hover{ transform: translateY(-3px); box-shadow: 0 12px 36px rgba(242,143,59,0.12) }
+
+.btn-ghost{ display:inline-block; padding:0.55rem 0.9rem; border-radius:10px; background:rgba(255,255,255,0.04); color:#e9f0ff; text-decoration:none; border:1px solid rgba(255,255,255,0.06) }
+
+.mobs-welcome-visual { flex: 0 0 320px; max-width:360px; display:flex; align-items:center; justify-content:center }
+.mobs-welcome-visual img { width:100%; height:auto; border-radius:12px; box-shadow: 0 20px 60px rgba(2,6,23,0.6); }
+
+@media (max-width: 880px) {
+  .mobs-welcome-inner { flex-direction: column; align-items:flex-start; gap:1rem }
+  .mobs-welcome-visual { width: 100%; max-width:560px }
+}
+
+@media (max-width: 520px) {
+  .mobs-welcome-section { padding: 2rem 1rem }
+  .mobs-title { font-size: 1.5rem }
+  .mobs-welcome-visual { display:none }
+}
+
+/* Accessibility + reduced-motion */
+.btn-primary:focus, .btn-ghost:focus { outline: 3px solid rgba(246,200,76,0.16); outline-offset:3px }
+
+@media (prefers-reduced-motion: reduce) {
+  .btn-primary, .btn-ghost { transition: none !important }
+}
+
+.mobs-title.reveal { transform: translateY(8px); opacity: 0 }
+.mobs-title.reveal.is-visible { transform: translateY(0); opacity: 1 }
+
+

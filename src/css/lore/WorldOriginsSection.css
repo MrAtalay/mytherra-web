@@ -1,0 +1,159 @@
+.world-origins-section {
+  position: relative;
+  padding: 6rem 1.5rem;
+  background: radial-gradient(
+    circle at top,
+    rgba(120, 120, 140, 0.08),
+    rgba(5, 5, 10, 0.95)
+  );
+  color: #e6e6eb;
+  overflow: hidden;
+}
+
+.world-origins-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* ---------------- Header ---------------- */
+
+.origins-header {
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto 4rem;
+}
+
+.origins-header .eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-size: 0.75rem;
+  color: #9aa0ff;
+  margin-bottom: 0.75rem;
+}
+
+.origins-title {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.origins-lead {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #b9bccf;
+}
+
+/* ---------------- Grid ---------------- */
+
+.origins-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+  margin-bottom: 4rem;
+}
+
+/* ---------------- Cards ---------------- */
+
+.origin-card {
+  position: relative;
+  padding: 2rem 1.75rem;
+  border-radius: 16px;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.05),
+    rgba(0, 0, 0, 0.35)
+  );
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(6px);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.origin-card h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.75rem;
+}
+
+.origin-card p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #d0d3e6;
+}
+
+.origin-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+/* Hover */
+.origin-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.55);
+}
+
+/* ---------------- Variants ---------------- */
+
+.origin-card.light::before {
+  background: radial-gradient(
+    circle at top,
+    rgba(255, 230, 150, 0.35),
+    transparent 70%
+  );
+}
+
+.origin-card.light h3 {
+  color: #ffe9a6;
+}
+
+.origin-card.shadow::before {
+  background: radial-gradient(
+    circle at top,
+    rgba(120, 80, 180, 0.4),
+    transparent 70%
+  );
+}
+
+.origin-card.shadow h3 {
+  color: #c7a6ff;
+}
+
+.origin-card.balance::before {
+  background: radial-gradient(
+    circle at top,
+    rgba(120, 200, 180, 0.35),
+    transparent 70%
+  );
+}
+
+.origin-card.balance h3 {
+  color: #9fe0d1;
+}
+
+/* ---------------- Quote ---------------- */
+
+.origins-quote {
+  text-align: center;
+  font-style: italic;
+  font-size: 1rem;
+  color: #aeb2cc;
+  opacity: 0.85;
+}
+
+.origins-quote blockquote {
+  margin: 0;
+}
+
+/* ---------------- Responsive ---------------- */
+
+@media (max-width: 600px) {
+  .world-origins-section {
+    padding: 4.5rem 1.25rem;
+  }
+
+  .origins-header {
+    margin-bottom: 3rem;
+  }
+}
