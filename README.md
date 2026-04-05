@@ -1,16 +1,105 @@
-# React + Vite
+# 🏰 Mytherra Web - Full Stack Project
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A full-stack web application built with **React + Vite** (frontend) and **Express.js + MongoDB** (backend).
 
-Currently, two official plugins are available:
+## 📋 Requirements
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Node.js** (v16+)
+- **npm** or **yarn**
+- **MongoDB Atlas** account (or local MongoDB)
 
-## React Compiler
+## 🚀 Installation & Setup
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### 1. Clone the Repository
+```bash
+git clone https://github.com/MrAtalay/mytherra-web.git
+cd mytherra-web
+```
 
-## Expanding the ESLint configuration
+### 2. Install Dependencies
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+**Frontend:**
+```bash
+npm install
+```
+
+**Backend:**
+```bash
+cd server
+npm install
+cd ..
+```
+
+### 3. Environment Configuration
+
+Create `.env` file in the `server/` directory:
+```bash
+cp server/.env.example server/.env
+```
+
+Then edit `server/.env` and add your MongoDB credentials:
+```
+PORT=5000
+MONGO_URI=mongodb+srv://your_username:your_password@cluster0.abc.mongodb.net/mytherra?retryWrites=true&w=majority
+JWT_SECRET=your_jwt_secret_key
+```
+
+**Get MongoDB URI from:**
+- [MongoDB Atlas](https://www.mongodb.com/cloud/atlas) → Create a cluster → Connect → Copy connection string
+
+### 4. Start the Application
+
+**Terminal 1 - Backend (port 5000):**
+```bash
+cd server
+npm run dev
+```
+
+**Terminal 2 - Frontend (port 5173):**
+```bash
+npm run dev
+```
+
+### 5. Access the App
+- **Frontend:** http://localhost:5173
+- **Backend API:** http://localhost:5000
+
+## 📁 Project Structure
+
+```
+├── src/                 # React frontend
+│   ├── components/      # React components
+│   ├── pages/          # Page components
+│   ├── data/           # Static data
+│   └── css/            # Stylesheets
+├── server/             # Express backend
+│   ├── src/
+│   │   ├── config/    # Database config
+│   │   ├── models/    # MongoDB models
+│   │   ├── routes/    # API routes
+│   │   └── middleware/
+│   └── index.js
+└── public/             # Static assets
+```
+
+## 🛠️ Available Scripts
+
+**Frontend:**
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm run lint` - Run ESLint
+
+**Backend:**
+- `npm run dev` - Start with nodemon (auto-reload)
+- `npm start` - Start production server
+
+## ⚠️ Important Notes
+
+- **Never commit `.env` file** (already in .gitignore)
+- Use `.env.example` as template for your environment variables
+- Make sure MongoDB network access allows your IP address
+- Frontend runs on port **5173**, backend on port **5000**
+
+## 📝 License
+
+ISC
