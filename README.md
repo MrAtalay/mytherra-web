@@ -44,8 +44,8 @@ MONGO_URI=mongodb+srv://your_username:your_password@cluster0.abc.mongodb.net/myt
 JWT_SECRET=your_jwt_secret_key
 ```
 
-**Get MongoDB URI from:**
-- [MongoDB Atlas](https://www.mongodb.com/cloud/atlas) → Create a cluster → Connect → Copy connection string
+**⚠️ Important: Each developer needs their own MongoDB Atlas account!**  
+See [SETUP_GUIDE.md](./SETUP_GUIDE.md) for detailed MongoDB setup instructions.
 
 ### 4. Start the Application
 
