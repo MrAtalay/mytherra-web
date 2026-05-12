@@ -7,7 +7,7 @@ function HeroSection() {
       {/* Background Video */}
       <video
         autoPlay
-        
+        muted
         loop
         playsInline
         style={styles.video}

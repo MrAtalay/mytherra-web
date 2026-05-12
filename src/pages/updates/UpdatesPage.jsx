@@ -1,4 +1,4 @@
-import { updates } from "../../data/updates/updatescard";
+import { useApi } from "../../hooks/useApi";
 import UpdatesWelcomeSection from "../../components/updates/UpdatesWelcomeSection";
 import UpdatesTabsSection from "../../components/updates/UpdatesTabsSection";
 import LatestUpdatesSection from "../../components/updates/LatestUpdatesSection";
@@ -8,7 +8,8 @@ import Footer from "../../components/general/Footer";
 import UpdatesCard from "../../components/updates/UpdatesCard";
 import "../../css/updates/UpdatesPage.css";
 
-function UpdatesPage() {
+export default function UpdatesPage() {
+  const { data: updates, loading } = useApi("/api/updates");
   return (
     <>
       <UpdatesWelcomeSection />
@@ -16,14 +17,13 @@ function UpdatesPage() {
       <LatestUpdatesSection />
       <UpdatesListSection />
       <section className="updates-grid">
-        {updates.map(item => (
-          <UpdatesCard key={item.id} updates={item} />
-        ))}
+        {loading
+          ? <p style={{ textAlign: "center", color: "#c8aa6e" }}>Yükleniyor...</p>
+          : updates.map((item) => <UpdatesCard key={item.id} updates={item} />)
+        }
       </section>
       <UpdatesFooterCTA />
       <Footer />
     </>
   );
 }
-
-export default UpdatesPage;

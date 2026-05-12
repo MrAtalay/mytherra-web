@@ -3,7 +3,7 @@ import "../../css/champions/ChampionCard.css";
 export default function ChampionCard({ champion }) {
   return (
     <section className="champion-card">
-      <img src={champion.image} alt={champion.name} />
+      {champion.imageUrl && <img src={champion.imageUrl} alt={champion.name} />}
 
       <div className="champion-info">
         <h2>{champion.name}</h2>

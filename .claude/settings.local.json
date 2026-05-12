@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(pkill -f \"node\")",
+      "Bash(PORT=5002 node index.js)",
+      "Bash(curl -s -X POST http://localhost:5002/api/auth/register -H 'Content-Type: application/json' -d '{\"username\":\"testuser3\",\"email\":\"test3@mytherra.com\",\"password\":\"test1234\"}')"
+    ]
+  }
+}

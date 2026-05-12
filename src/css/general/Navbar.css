@@ -106,6 +106,19 @@
   font-size: 12px;
 }
 
+.navbar-admin-label {
+  color: #c8aa6e;
+  font-weight: 700;
+  font-size: 14px;
+  cursor: default;
+}
+
+.navbar-username {
+  color: #c8aa6e;
+  font-weight: 600;
+  font-size: 14px;
+}
+
 /* Right buttons */
 .navbar-right {
   display: flex;

@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import "../../css/champions/ChampionSlider.css";
 import { Link } from "react-router-dom";
 
+
 import champ1 from "../../assets/champ1.png";
 import champ2 from "../../assets/champ2.png";
 import champ3 from "../../assets/champ3.png";
@@ -48,8 +49,7 @@ export default function ChampionSlider() {
       <div className="content">
         <h2>{champ.name}</h2>
         <p>{champ.desc}</p>
-        <Link to="/champions"
-        className={({ isActive }) => (isActive ? "active" : "")}>
+        <Link to="/champions">
           <button>DETAYLAR</button>
         </Link>
       </div>
